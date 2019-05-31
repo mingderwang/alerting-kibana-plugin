@@ -5,6 +5,7 @@ class AlertingFakes {
   constructor(seed = 'seed') {
     this.chance = new Chance(seed);
 
+    this.randomMailDestination = this.randomMailDestination.bind(this);
     this.randomCustomWebhookDestination = this.randomCustomWebhookDestination.bind(this);
     this.randomChimeDestination = this.randomChimeDestination.bind(this);
     this.randomSlackDestination = this.randomSlackDestination.bind(this);
@@ -20,6 +21,20 @@ class AlertingFakes {
     this.randomInputs = this.randomInputs.bind(this);
     this.randomMonitorEnabled = this.randomMonitorEnabled.bind(this);
     this.randomMonitor = this.randomMonitor.bind(this);
+  }
+
+  randomMailDestination() {
+    return {
+      type: 'mail',
+      chime: {
+        host: `${this.chance.word}`,
+        port: '',
+        auth: false,
+        starttls: false,
+        username: this.chance.word(),
+        password: this.chance.word(),
+      }
+    };
   }
 
   randomCustomWebhookDestination() {
