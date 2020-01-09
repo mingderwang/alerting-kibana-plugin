@@ -26,13 +26,6 @@ class AlertingFakes {
     return {
       type: 'mail',
       mail: {
-        host: `${this.chance.word}`,
-        port: '25',
-        auth: false,
-        starttls: false,
-        username: this.chance.word(),
-        password: this.chance.word(),
-        from: `${this.chance.word()}@${this.chance.word()}.test`,
         recipients: `${this.chance.word()}@${this.chance.word()}.test`,
       },
     };
