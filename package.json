@@ -32,6 +32,7 @@
     "@kbn/eslint-import-resolver-kibana": "link:../../packages/kbn-eslint-import-resolver-kibana",
     "@kbn/plugin-helpers": "link:../../packages/kbn-plugin-helpers",
     "husky": "^2.3.0",
+    "kbn-plugin-helpers": "link:../../kibana/packages/kbn-plugin-helpers",
     "lint-staged": "^8.1.6"
   },
   "dependencies": {
